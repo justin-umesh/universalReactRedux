@@ -1,0 +1,13 @@
+{
+  "presets": ["react", "stage-0", ["env", {"targets":{"browsers": ["last 2 versions"]}}]],
+  "plugins": [
+    "async-to-promises",
+    "transform-export-extensions",
+    ["transform-object-rest-spread", { "useBuiltIns": true }],
+    ["transform-runtime", { "polyfill": false, "regenerator": false }],
+    ["module-resolver", {
+      "root": ["./src/shared"],
+      "extensions": [".js", ".jsx", ".es", ".es6"]
+    }]
+  ]
+}
